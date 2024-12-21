@@ -1,0 +1,108 @@
+.card-img-overlay-profile {
+    position: absolute;
+    background-color: $primary-05;
+    height: 200px;
+    width: 100%;
+    color: $white;
+    padding: 1.5rem;
+}
+
+#chart-1,
+#chart-2,
+#chart-3,
+#chart-4 {
+    position: absolute;
+    bottom: -5px;
+    inset-inline-end: 0;
+}
+
+.visit-gender.male:before {
+    background-color: $primary;
+}
+
+.visit-gender.female:before {
+    background-color: $secondary;
+}
+
+.visit-gender {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 12px;
+        border-radius: 0.5rem;
+        inset-block-start: 4px;
+        inset-inline-start: -10px;
+    }
+}
+
+#chart-10,
+#chart-11,
+#chart-12,
+#chart-13 {
+    position: absolute;
+    inset-block-start: -0.5rem;
+    inset-inline-end: 1rem;
+}
+
+.widgets-task-list {
+    list-style: none;
+    position: relative;
+    margin-block-end: 0;
+
+    li {
+        margin-block-end: 19px;
+        position: relative;
+        &:last-child {
+            margin-block-end: 0;
+        }
+        & {
+        position: relative;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 9px;
+            height:9px;
+            background-color: $custom-white;
+            inset-inline-start: -27px;
+            inset-block-start: 7px;
+            border-radius: 50%;
+        }
+        &:nth-child(1):before {
+            border: 2px solid $primary;
+        }
+        &:nth-child(2):before {
+            border: 2px solid $secondary;
+        }
+        &:nth-child(3):before {
+            border: 2px solid $success;
+        }
+        &:nth-child(4):before {
+            border: 2px solid $orange;
+        }
+        &:nth-child(5):before {
+            border: 2px solid $info;
+        }
+        &:nth-child(6):before {
+            border: 2px solid $warning;
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        bottom: 0;
+        height: 90%;
+        inset-inline-start: 9px;
+        border-inline-start: 1px dashed var(--default-border);
+    }
+}
+#activecustomers {
+    .apexcharts-text.apexcharts-datalabel-label {
+        fill: $text-muted;
+    }
+}

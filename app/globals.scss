@@ -1,0 +1,55 @@
+@import "../public/assets/css/styles.css";
+@import "../public/assets/css/icons.css";
+
+//@import "@simonwep/pickr/dist/themes/classic.min.css";
+//@import "@simonwep/pickr/dist/themes/monolith.min.css";
+//@import "@simonwep/pickr/dist/themes/nano.min.css";
+
+@import "simplebar-react/dist/simplebar.min.css";
+
+@import "gridjs/dist/theme/mermaid.css"; // (Grid css)
+
+// Import Swiper styles
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+@import "swiper/css/effect-coverflow";
+@import "swiper/css/thumbs";
+@import "swiper/css/effect-flip";
+@import "swiper/css/effect-fade";
+@import "swiper/css/effect-cube";
+@import "swiper/css/scrollbar";
+@import "swiper/css/free-mode";
+
+@import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
+@import "filepond/dist/filepond.min.css"; // filepond
+@import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"; // filepond
+@import "react-color-palette/css"; //color picker
+@import "react-datepicker/dist/react-datepicker.css"; //(datepicker)
+@import 'react-perfect-scrollbar/dist/css/styles.css'; //perfectscrollbar
+@import "react-range-slider-input/dist/style.css"; //rangeslider
+@import 'react-phone-number-input/style.css';
+// react dual box
+@import "react-country-state-city/dist/react-country-state-city.css"; //react-country-state-city
+
+@import 'yet-another-react-lightbox/plugins/thumbnails.css'; // yet another light box
+@import "yet-another-react-lightbox/styles.css";
+
+.sun-editor .se-controller .se-btn-group{
+    background-color:var(--custom-white) !important;
+}
+
+@media (min-width: 1600px) {
+    [data-vertical-style="detached"][data-width="default"] {
+        .page.error-bg {
+        width: 100%;
+        padding-inline-start: 0;
+    }
+    }
+}
+[dir="rtl"] {
+    .PhoneInputCountry {
+        margin-left: .35rem;
+        margin-right: inherit;
+    }
+}
