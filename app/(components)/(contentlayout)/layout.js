@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
         <Switcher />
         <div className="page">
           <Header />
-          {/* <Sidebar/>*/}
+           <Sidebar/>
           <div className="main-content app-content">
             <div className="container-fluid">{children}</div>
           </div>

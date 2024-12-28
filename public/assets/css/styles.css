@@ -67,7 +67,7 @@ typography
 /* Montserrat */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-  --body-bg-rgb: 248, 248, 250;
+  --body-bg-rgb: 211,211,211;
   --primary-rgb: 84, 109, 254;
   --secondary-rgb: 215, 124, 247;
   --warning-rgb: 244, 167, 66;

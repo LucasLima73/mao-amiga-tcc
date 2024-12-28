@@ -1,17 +1,15 @@
+'use client'
+import { Provider } from 'react-redux'
+import './globals.scss'
+import store from '../shared/redux/store'
 
-"use client"
-import { Provider } from "react-redux";
-import "./globals.scss";
-import store from "../shared/redux/store";
-
-
-const RootLayout = ({children}) =>{
-    return(
-      <>
-      <Provider store={store}>
-          {children}
-      </Provider>
-      </>
-    )
-  }
-  export default RootLayout
+const RootLayout = ({ children }) => {
+  return (
+    <html>
+      <body>
+        <Provider store={store}>{children}</Provider>
+      </body>
+    </html>
+  )
+}
+export default RootLayout

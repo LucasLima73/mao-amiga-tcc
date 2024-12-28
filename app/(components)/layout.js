@@ -2,6 +2,7 @@
 import React, { memo} from 'react'
 import { connect } from 'react-redux';
 import { ThemeChanger } from '../../shared/redux/action';
+import '../globals.scss'
 
 function Layout({children, local_varaiable, ThemeChanger}) {
   const customstyles =
@@ -20,7 +21,7 @@ function Layout({children, local_varaiable, ThemeChanger}) {
   return (
     <>
          <html
-            lang='en'
+            lang='pt-br'
             suppressHydrationWarning={true} 
             dir={local_varaiable.dir}
             data-theme-mode={local_varaiable.dataThemeMode}
