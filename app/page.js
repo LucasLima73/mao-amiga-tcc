@@ -4,7 +4,8 @@ import React, { Fragment } from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import { generateEmbedding } from '../shared/services/embeddingService'
+import { searchInPinecone } from '../shared/services/searchInPinecone'
 const HomePage = () => {
   const breakpoints1 = {
     320: {
@@ -25,8 +26,19 @@ const HomePage = () => {
     },
   }
 
+  const handleSearch = async (query) => {
+    const queryEmbedding = await generateEmbedding(query)
+    const results = await searchInPinecone(queryEmbedding)
+    console.log('Resultados da busca:', results)
+  }
+
   return (
     <div style={{ padding: '20px' }}>
+      <input
+        type="text"
+        placeholder="Buscar..."
+        onChange={(e) => handleSearch(e.target.value)}
+      />
       <Row>
         <Col xl={18}>
           <div className="card custom-card card-bg-primary border-0 shadow-none faq-banner-card">
@@ -71,7 +83,7 @@ const HomePage = () => {
         <Col xl={12}>
           <div className="row row-cols-1 row-cols-md-4 g-4 mt-3">
             <div className="col">
-              <Link href='/trilhaSaude'>
+              <Link href="/trilhaSaude">
                 <Card className="custom-card">
                   <img
                     src="../../assets/images/media/media-44.jpg"
@@ -95,9 +107,7 @@ const HomePage = () => {
                   alt="..."
                 />
                 <Card.Body>
-                  <h6 className="card-title fw-medium">
-                    Documentação
-                  </h6>
+                  <h6 className="card-title fw-medium">Documentação</h6>
                   <p className="card-text">
                     If you are going to use a passage of Lorem Ipsum, you need
                     to be sure there isn't anything embarrassing hidden in the
@@ -114,9 +124,7 @@ const HomePage = () => {
                   alt="..."
                 />
                 <Card.Body>
-                  <h6 className="card-title fw-medium">
-                    Direitos Humanos
-                  </h6>
+                  <h6 className="card-title fw-medium">Direitos Humanos</h6>
                   <p className="card-text">
                     If you are going to use a passage of Lorem Ipsum, you need
                     to be sure there isn't anything embarrassing hidden in the
@@ -133,9 +141,7 @@ const HomePage = () => {
                   alt="..."
                 />
                 <Card.Body>
-                  <h6 className="card-title fw-medium">
-                   Apoio Socieconomico
-                  </h6>
+                  <h6 className="card-title fw-medium">Apoio Socieconomico</h6>
                   <p className="card-text">
                     If you are going to use a passage of Lorem Ipsum, you need
                     to be sure there isn't anything embarrassing hidden in the

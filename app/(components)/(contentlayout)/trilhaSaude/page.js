@@ -15,7 +15,7 @@ import {
 } from 'react-bootstrap'
 const Select = dynamic(() => import('react-select'), { ssr: false })
 const Todolistdata = dynamic(
-  () => import('../../../../shared/data/pages/todolistdata'),
+  () => import('../../../../shared/data/pages/todolistdataTrilhaSaude'),
   { ssr: false }
 )
 import DatePicker from 'react-datepicker'
@@ -34,113 +34,51 @@ const TrilhaSaude = () => {
   //Assigned Selectdata
   const notifications = [
     {
-      date: 'Friday',
-      time: '02:31',
-      title: 'Event: Launch Party',
+      Progresso: 'Primeiro Passo',
+      time: 'Primeiro Passo',
+      title: 'Obter um documento de Identificação',
       description:
-        'Join us for a night of celebration as we unveil our latest product/service. There will be music, food, and exciting surprises!',
-      badge: 'April 15, 2024',
-      image: '../../assets/images/faces/1.jpg',
+        'Garanta o acesso a serviços e benefícios com um documento de identificação válido. \nEste é o primeiro passo para exercer seus direitos e deveres como cidadão.\nAcompanhe as instruções e obtenha o seu documento com facilidade!',
+      //badge: 'April 15, 2024',
+      image: '../../assets/images/faces/identidade.jpg',
     },
     {
-      date: 'Monday',
-      time: '08:47',
-      title: 'Milestone: Company Establishment',
+      //date: 'Monday',
+      time: 'Segundo Passo',
+      title: 'Conseguir o CPF (Cadastro de Pessoa Física)',
       description:
-        'Our journey began on this day when we officially established [Your Company Name]. Cheers to the years of growth and success!',
-      badge: 'January 1, 2020',
-      image: '../../assets/images/faces/15.jpg',
+        'O CPF é exigido em muitos serviços públicos, incluindo o SUS.',
+      //badge: 'January 1, 2020',
+      image: '../../assets/images/faces/cpf.jpg',
     },
     {
-      date: 'Yesterday',
-      time: '18:43',
-      title: 'Achievement: 10,000 Followers',
+      //date: 'Yesterday',
+      time: 'Terceiro Passo',
+      title: 'Garantir um Comprovante de Residência',
       description:
-        "We've hit a milestone! Thanks to each and every one of our followers for being part of our community. Here's to the next 10,000!",
-      badge: 'June 1, 2022',
+        "O que pode ser usado: Conta de água, luz, telefone, ou contrato de aluguel.",
+      //badge: 'June 1, 2022',
       image: '../../assets/images/faces/2.jpg',
     },
     {
       date: 'Today',
-      time: '03:18',
-      title: 'Product Launch: Innovation X',
+      time: 'Quarto Passo',
+      title: 'Solicitar a carteirinha do SUS',
       description:
-        'Introducing Innovation X, our latest creation that will revolutionize the way you [brief description of the product/service]. Get ready for a new era!',
-      badge: 'September 10, 2024',
+        'Solicitar a carteirinha do SUS é essencial para garantir acesso gratuito a serviços de saúde pública no Brasil, como consultas, exames e medicamentos.',
+      //badge: 'September 10, 2024',
       image: '../../assets/images/faces/8.jpg',
     },
     {
-      date: 'Today',
-      time: '12:24',
-      title: 'Team Building Retreat',
+      //date: 'Today',
+      time: 'Quinto Passo',
+      title: 'Confira as Unidades Básicas de Saúde (UBS) próximos a sua residência',
       description:
-        'Our team took a break to recharge and bond. We came back stronger and more motivated than ever to bring you top-notch products/services!',
-      badge: 'November 5-7, 2021',
+        'Encontre as Unidades Básicas de Saúde (UBS) mais próximas da sua casa e facilite seu acesso à saúde.',
+      //badge: 'November 5-7, 2021',
       image: '../../assets/images/faces/13.jpg',
     },
-    {
-      date: 'Today',
-      time: '04:11',
-      title: 'Community Engagement: Charity Event',
-      description:
-        'Proud to give back to the community! Our team organized a charity event to support [Charity Name]. Together, we can make a difference.',
-      badge: 'December 12, 2022',
-      image: '../../assets/images/faces/6.jpg',
-    },
-    {
-      date: 'Today',
-      time: '02:52',
-      title: 'Industry Conference: Blue Ribbon Conference',
-      description:
-        'Our team attended Blue Ribbon Conference, gaining valuable insights and networking with industry leaders. Exciting times ahead!',
-      badge: 'March 5-8, 2022',
-      image: '../../assets/images/faces/11.jpg',
-    },
-    {
-      date: 'Wednesday',
-      time: '10:15',
-      title: 'Workshop: AI for Beginners',
-      description:
-        'Learn the basics of artificial intelligence in this beginner-friendly workshop. No prior experience required!',
-      badge: 'July 20, 2023',
-      image: '../../assets/images/faces/3.jpg',
-    },
-    {
-      date: 'Thursday',
-      time: '14:30',
-      title: 'Webinar: Future of Technology',
-      description:
-        'Join us for an exciting webinar exploring the future trends in technology and how they’ll impact our daily lives.',
-      badge: 'August 10, 2023',
-      image: '../../assets/images/faces/4.jpg',
-    },
-    {
-      date: 'Saturday',
-      time: '16:00',
-      title: 'Hackathon: Code for Good',
-      description:
-        'Be part of our hackathon to develop innovative solutions for social challenges. Collaborate, code, and make an impact!',
-      badge: 'October 15, 2023',
-      image: '../../assets/images/faces/5.jpg',
-    },
-    {
-      date: 'Sunday',
-      time: '09:00',
-      title: 'Fitness Challenge: 5K Run',
-      description:
-        'Start your Sunday with an energetic 5K run. Let’s promote health and fitness together!',
-      badge: 'March 12, 2023',
-      image: '../../assets/images/faces/7.jpg',
-    },
-    {
-      date: 'Tuesday',
-      time: '13:45',
-      title: 'Announcement: New Office',
-      description:
-        'We’re expanding! Our new office space is designed to foster creativity and collaboration. Come visit us soon!',
-      badge: 'November 25, 2023',
-      image: '../../assets/images/faces/12.jpg',
-    },
+
   ]
 
   //Datepicker

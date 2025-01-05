@@ -125,27 +125,29 @@ const HomePage = () => {
               </Link>
             </div>
             <div className="col">
-              <Card className="custom-card">
-                <img
-                  src="../../assets/images/media/media-43.jpg"
-                  className="card-img-top"
-                  alt="..."
-                />
-                <Card.Body>
-                  <h6 className="card-title fw-medium">Documentação</h6>
-                  <p className="card-text">
-                    Explore nossa trilha de informações para acessar conteúdos
-                    completos sobre
-                    <strong>
-                      emissão de CPF, acesso a documentos essenciais, direitos
-                      básicos
-                    </strong>{' '}
-                    e<strong>orientações práticas</strong>. Descubra como
-                    utilizar recursos, entender processos burocráticos e
-                    facilitar sua integração na sociedade.
-                  </p>
-                </Card.Body>
-              </Card>
+              <Link href="/trilhaDocumentacao">
+                <Card className="custom-card">
+                  <img
+                    src="../../assets/images/media/media-43.jpg"
+                    className="card-img-top"
+                    alt="..."
+                  />
+                  <Card.Body>
+                    <h6 className="card-title fw-medium">Documentação</h6>
+                    <p className="card-text">
+                      Explore nossa trilha de informações para acessar conteúdos
+                      completos sobre
+                      <strong>
+                        emissão de CPF, acesso a documentos essenciais, direitos
+                        básicos
+                      </strong>{' '}
+                      e<strong>orientações práticas</strong>. Descubra como
+                      utilizar recursos, entender processos burocráticos e
+                      facilitar sua integração na sociedade.
+                    </p>
+                  </Card.Body>
+                </Card>
+              </Link>
             </div>
             <div className="col">
               <Card className="custom-card">
