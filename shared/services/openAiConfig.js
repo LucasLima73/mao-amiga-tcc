@@ -2,9 +2,7 @@ import OpenAI from 'openai'
 
 // Inicialize o cliente OpenAI
 const openai = new OpenAI({
-  apiKey:
-    '',
-  dangerouslyAllowBrowser: true, // Permite uso no navegador
+  //apiKey: '',
 })
 
 // Função para gerar embeddings
