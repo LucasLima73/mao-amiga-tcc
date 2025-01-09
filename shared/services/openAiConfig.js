@@ -1,9 +1,6 @@
 import OpenAI from 'openai'
 
-// Inicialize o cliente OpenAI
-const openai = new OpenAI({
-  //apiKey: '',
-})
+
 
 // Função para gerar embeddings
 export const createEmbedding = async (content) => {
